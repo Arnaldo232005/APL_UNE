@@ -1,0 +1,28 @@
+name: flutter_application_1
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.10.7
+
+dependencies:
+  animate_do: ^4.2.0
+  flutter:
+    sdk: flutter
+  google_fonts: ^8.0.2
+  intl: ^0.20.2
+  provider: ^6.1.5+1
+  supabase_flutter: ^2.12.2
+  table_calendar: ^3.2.0
+  fl_chart: ^0.70.2
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.10.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
