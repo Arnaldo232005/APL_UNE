@@ -29,6 +29,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> with SingleTick
   final _descController = TextEditingController();
   final _weightController = TextEditingController();
   final _scoreController = TextEditingController();
+  final Map<String, TextEditingController> _scoreControllers = {};
 
   @override
   void initState() {
@@ -43,6 +44,9 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> with SingleTick
     _descController.dispose();
     _weightController.dispose();
     _scoreController.dispose();
+    for (var controller in _scoreControllers.values) {
+      controller.dispose();
+    }
     super.dispose();
   }
 
@@ -363,11 +367,22 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> with SingleTick
       itemCount: evaluations.length,
       itemBuilder: (context, index) {
         final eval = evaluations[index];
-        final scoreController = TextEditingController(text: eval.score > 0 ? eval.score.toString() : '');
+        
+        // Mantener o crear el controlador para esta evaluación
+        if (!_scoreControllers.containsKey(eval.id)) {
+          _scoreControllers[eval.id] = TextEditingController(
+            text: eval.score > 0 ? eval.score.toString() : '',
+          );
+        }
+        final controller = _scoreControllers[eval.id]!;
+
         return Card(
           elevation: 0,
           margin: const EdgeInsets.only(bottom: 12),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16), side: BorderSide(color: Colors.grey[200]!)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+            side: BorderSide(color: Colors.grey[200]!),
+          ),
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Row(
@@ -378,26 +393,52 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> with SingleTick
                     children: [
                       Text(eval.title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                       const SizedBox(height: 4),
-                      Text('${eval.weight}% - ${DateFormat('dd MMM').format(eval.date)}', style: TextStyle(color: Colors.grey[600], fontSize: 12)),
+                      Text(
+                        '${eval.weight}% - ${DateFormat('dd MMM').format(eval.date)}',
+                        style: TextStyle(color: Colors.grey[600], fontSize: 12),
+                      ),
                     ],
                   ),
                 ),
-                SizedBox(
-                  width: 80,
+                Container(
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[50],
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                   child: TextField(
-                    controller: scoreController,
+                    controller: controller,
                     keyboardType: TextInputType.number,
                     textAlign: TextAlign.center,
+                    style: const TextStyle(fontWeight: FontWeight.bold),
                     decoration: InputDecoration(
-                      hintText: '0 / 20',
+                      hintText: 'Nota',
+                      hintStyle: TextStyle(color: Colors.grey[400], fontSize: 12, fontWeight: FontWeight.normal),
                       contentPadding: const EdgeInsets.symmetric(horizontal: 8),
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                      border: InputBorder.none,
+                      suffixIcon: IconButton(
+                        icon: const Icon(Icons.check_circle, color: Colors.green, size: 22),
+                        padding: EdgeInsets.zero,
+                        constraints: const BoxConstraints(),
+                        onPressed: () {
+                          _updateScore(eval.id, controller.text);
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text('Nota de ${eval.title} actualizada'),
+                              duration: const Duration(seconds: 1),
+                              behavior: SnackBarBehavior.floating,
+                              width: 250,
+                            ),
+                          );
+                        },
+                      ),
                     ),
                     onSubmitted: (val) => _updateScore(eval.id, val),
                   ),
                 ),
+                const SizedBox(width: 8),
                 IconButton(
-                  icon: const Icon(Icons.delete_outline, color: Colors.grey, size: 20),
+                  icon: const Icon(Icons.delete_outline, color: Colors.redAccent, size: 20),
                   onPressed: () => _deleteEvaluation(eval.id),
                 ),
               ],
