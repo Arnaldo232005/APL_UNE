@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'core/constants.dart';
 import 'screens/login_screen.dart';
-import 'screens/dashboard_screen.dart';
+import 'main_layout.dart';
 import 'theme/app_theme.dart';
-
 import 'services/notification_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  
+  // Initialize Spanish locale for DateFormat
+  await initializeDateFormatting('es', null);
   
   // Initialize Notifications
   await NotificationService().init();
@@ -38,7 +41,7 @@ class UniversityApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       home: Supabase.instance.client.auth.currentUser == null
           ? const LoginScreen()
-          : const DashboardScreen(),
+          : const MainLayout(),
     );
   }
 }

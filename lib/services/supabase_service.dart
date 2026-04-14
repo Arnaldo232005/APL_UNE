@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import '../models/course.dart';
 import '../models/evaluation.dart';
 
 class SupabaseService {
@@ -115,6 +114,40 @@ class SupabaseService {
       await _client.from('evaluations').delete().eq('id', evaluationId);
     } catch (e) {
       debugPrint('Error en deleteEvaluation: $e');
+      rethrow;
+    }
+  }
+
+  /// Returns all evaluations joined with their course name and color for the global calendar
+  Future<List<Map<String, dynamic>>> getAllEvaluationsWithCourse() async {
+    try {
+      final response = await _client
+          .from('evaluations')
+          .select('*, courses(name, color_hex, icon_code)')
+          .order('evaluation_date', ascending: true);
+      return List<Map<String, dynamic>>.from(response);
+    } catch (e) {
+      debugPrint('Error en getAllEvaluationsWithCourse: $e');
+      rethrow;
+    }
+  }
+
+  /// Updates title, description, weight and difficulty of an evaluation
+  Future<void> updateEvaluation(String evaluationId, {
+    required String title,
+    required String? description,
+    required double weight,
+    required int difficulty,
+  }) async {
+    try {
+      await _client.from('evaluations').update({
+        'title': title,
+        'description': description,
+        'weight': weight,
+        'difficulty': difficulty,
+      }).eq('id', evaluationId);
+    } catch (e) {
+      debugPrint('Error en updateEvaluation: $e');
       rethrow;
     }
   }
