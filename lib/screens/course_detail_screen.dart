@@ -401,40 +401,40 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> with SingleTick
                   ),
                 ),
                 Container(
-                  width: 100,
+                  width: 70,
                   decoration: BoxDecoration(
-                    color: Colors.grey[50],
+                    color: Colors.grey[100],
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: TextField(
                     controller: controller,
-                    keyboardType: TextInputType.number,
+                    keyboardType: const TextInputType.numberWithOptions(decimal: true),
+                    textInputAction: TextInputAction.done,
                     textAlign: TextAlign.center,
                     style: const TextStyle(fontWeight: FontWeight.bold),
                     decoration: InputDecoration(
                       hintText: 'Nota',
-                      hintStyle: TextStyle(color: Colors.grey[400], fontSize: 12, fontWeight: FontWeight.normal),
+                      hintStyle: TextStyle(color: Colors.grey[400], fontSize: 12),
                       contentPadding: const EdgeInsets.symmetric(horizontal: 8),
                       border: InputBorder.none,
-                      suffixIcon: IconButton(
-                        icon: const Icon(Icons.check_circle, color: Colors.green, size: 22),
-                        padding: EdgeInsets.zero,
-                        constraints: const BoxConstraints(),
-                        onPressed: () {
-                          _updateScore(eval.id, controller.text);
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text('Nota de ${eval.title} actualizada'),
-                              duration: const Duration(seconds: 1),
-                              behavior: SnackBarBehavior.floating,
-                              width: 250,
-                            ),
-                          );
-                        },
-                      ),
                     ),
                     onSubmitted: (val) => _updateScore(eval.id, val),
                   ),
+                ),
+                const SizedBox(width: 4),
+                IconButton(
+                  icon: const Icon(Icons.check_circle, color: Colors.green, size: 28),
+                  onPressed: () {
+                    _updateScore(eval.id, controller.text);
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Nota de ${eval.title} actualizada'),
+                        duration: const Duration(seconds: 1),
+                        behavior: SnackBarBehavior.floating,
+                        width: 250,
+                      ),
+                    );
+                  },
                 ),
                 const SizedBox(width: 8),
                 IconButton(
