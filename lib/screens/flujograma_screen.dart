@@ -25,101 +25,320 @@ class FlowSubject {
 // ─────────────────────────────────────────────
 const List<FlowSubject> _subjects = [
   // ── PERIODO I ──
-  FlowSubject(code: 'FBTMM01', name: 'Matemática Básica', period: 1, credits: 4),
-  FlowSubject(code: 'FBTSP03', name: 'Introducción a la Ingeniería', period: 1, credits: 4),
-  FlowSubject(code: 'FBTSP04', name: 'Pensamiento Computacional', period: 1, credits: 4),
-  FlowSubject(code: 'FBTEM01', name: 'Competencias para Emprender', period: 1, credits: 4),
-  FlowSubject(code: 'FBPIN03', name: 'Inglés IV', period: 1, credits: 4),
+  FlowSubject(
+    code: 'FBTMM01',
+    name: 'Matemática Básica',
+    period: 1,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FBTSP03',
+    name: 'Introducción a la Ingeniería',
+    period: 1,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FBTSP04',
+    name: 'Pensamiento Computacional',
+    period: 1,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FBTEM01',
+    name: 'Competencias para Emprender',
+    period: 1,
+    credits: 4,
+  ),
+  FlowSubject(code: 'FBTIN04', name: 'Inglés IV', period: 1, credits: 4),
 
   // ── PERIODO II ──
-  FlowSubject(code: 'FBTMM01-II', name: 'Matemáticas I', period: 2, credits: 4),
-  FlowSubject(code: 'FBTHE35', name: 'Investigación y Sustentabilidad', period: 2, credits: 4),
-  FlowSubject(code: 'BPTQ01', name: 'Diseño Asistido por Computador', period: 2, credits: 4),
-  FlowSubject(code: 'BPTQ21', name: 'Química General I', period: 2, credits: 4),
-  FlowSubject(code: 'FTIN04', name: 'Inglés V', period: 2, credits: 4),
+  FlowSubject(code: 'BPTMI01', name: 'Matemáticas I', period: 2, credits: 4),
+  FlowSubject(
+    code: 'FBTCE05',
+    name: 'Investigación y Sustentabilidad',
+    period: 2,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'BPTPI07',
+    name: 'Diseño Asistido por Computador',
+    period: 2,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'BPTQI21',
+    name: 'Química General I',
+    period: 2,
+    credits: 4,
+  ),
+  FlowSubject(code: 'FBTIN05', name: 'Inglés V', period: 2, credits: 4),
 
   // ── PERIODO III ──
-  FlowSubject(code: 'BPTM01', name: 'Matemáticas II', period: 3, credits: 4),
-  FlowSubject(code: 'BPTF01', name: 'Física I', period: 3, credits: 4),
-  FlowSubject(code: 'BPTQ22', name: 'Laboratorio de Química Gral. I', period: 3, credits: 4),
-  FlowSubject(code: 'BPTM01-D', name: 'Matemáticas Discretas', period: 3, credits: 4),
-  FlowSubject(code: 'BPTSP05', name: 'Algoritmos y Programación', period: 3, credits: 4),
-  FlowSubject(code: 'FBTEM03', name: 'Como emprender con datos', period: 3, credits: 4),
-  FlowSubject(code: 'FTIN25', name: 'Inglés V (adv)', period: 3, credits: 4),
+  FlowSubject(code: 'BPTMI02', name: 'Matemáticas II', period: 3, credits: 4),
+  FlowSubject(code: 'BPTFI01', name: 'Física I', period: 3, credits: 4),
+  FlowSubject(
+    code: 'BPTQI22',
+    name: 'Laboratorio de Química General',
+    period: 3,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'BPTSP05',
+    name: 'Algoritmos y Programación',
+    period: 3,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FBTEM02',
+    name: 'Ideas Emprendedoras',
+    period: 3,
+    credits: 4,
+  ),
 
   // ── PERIODO IV ──
-  FlowSubject(code: 'BPTM03', name: 'Matemáticas III', period: 4, credits: 4),
-  FlowSubject(code: 'BPTF01-II', name: 'Física II', period: 4, credits: 4),
-  FlowSubject(code: 'BPTF02', name: 'Lab. de Física Aplicada', period: 4, credits: 4),
-  FlowSubject(code: 'BPTSP06', name: 'Estructuras de Datos', period: 4, credits: 4),
-  FlowSubject(code: 'BPTM01-AL', name: 'Álgebra Lineal', period: 4, credits: 4),
+  FlowSubject(code: 'BPTMI03', name: 'Matemáticas III', period: 4, credits: 4),
+  FlowSubject(code: 'BPTFI02', name: 'Física II', period: 4, credits: 4),
+  FlowSubject(
+    code: 'BPTMI30',
+    name: 'Matemáticas Discretas',
+    period: 4,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'BPTSP06',
+    name: 'Estructuras de Datos',
+    period: 4,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FGE1',
+    name: 'FGE',
+    period: 4,
+    credits: 4,
+    isElective: true,
+  ),
 
   // ── PERIODO V ──
-  FlowSubject(code: 'BPTM03-IV', name: 'Matemáticas IV', period: 5, credits: 4),
-  FlowSubject(code: 'BPTM06', name: 'Lab. de Estadística para Ing. I', period: 5, credits: 4),
-  FlowSubject(code: 'BPTF06', name: 'Lab. Estadística para Física', period: 5, credits: 4),
-  FlowSubject(code: 'BPTSP04', name: 'Sistemas de Información', period: 5, credits: 4),
-  FlowSubject(code: 'BPTEN12', name: 'Matemáticas para Computador', period: 5, credits: 4),
+  FlowSubject(code: 'BPTMI04', name: 'Matemáticas IV', period: 5, credits: 4),
+  FlowSubject(
+    code: 'BPTFI05',
+    name: 'Lab. de Física Aplicada',
+    period: 5,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FPTSP04',
+    name: 'Sistemas de Información',
+    period: 5,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'BPTEN12',
+    name: 'Arquitectura del Computador',
+    period: 5,
+    credits: 4,
+  ),
+  FlowSubject(code: 'BPTMI31', name: 'Álgebra Lineal', period: 5, credits: 4),
 
   // ── PERIODO VI ──
-  FlowSubject(code: 'BPTM04-V', name: 'Matemáticas V', period: 6, credits: 4),
-  FlowSubject(code: 'BPTM11', name: 'Ecuaciones Diferenciales', period: 6, credits: 4),
-  FlowSubject(code: 'BPTM06-II', name: 'Estadística para Ing. II', period: 6, credits: 4),
-  FlowSubject(code: 'BPTSP01', name: 'Bases de Datos I', period: 6, credits: 4),
-  FlowSubject(code: 'BPTEN12-A', name: 'Arquitectura del Computador', period: 6, credits: 4),
-  FlowSubject(code: 'BPTM03-AL', name: 'Álgebra Lineal II', period: 6, credits: 4),
+  FlowSubject(
+    code: 'BPTMI11',
+    name: 'Ecuaciones Diferenciales',
+    period: 6,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'BPTMI06',
+    name: 'Estadística para Ing. I',
+    period: 6,
+    credits: 4,
+  ),
+  FlowSubject(code: 'FPTSP01', name: 'Bases de Datos I', period: 6, credits: 4),
+  FlowSubject(
+    code: 'BPTSP03',
+    name: 'Organización del Computador',
+    period: 6,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FGE2',
+    name: 'FGE',
+    period: 6,
+    credits: 4,
+    isElective: true,
+  ),
 
   // ── PERIODO VII ──
-  FlowSubject(code: 'BPTM04-VII', name: 'Matemáticas V (cont.)', period: 7, credits: 4),
-  FlowSubject(code: 'BPTM05', name: 'Cálculo Numérico', period: 7, credits: 4),
-  FlowSubject(code: 'BPTM11-II', name: 'Ecuaciones Diferenciales II', period: 7, credits: 4),
-  FlowSubject(code: 'FPTSP26', name: 'Bases de Datos II', period: 7, credits: 4),
-  FlowSubject(code: 'BPTM11-A', name: 'Organización del Computador', period: 7, credits: 4),
-  FlowSubject(code: 'BPTSP17', name: 'Optimización I', period: 7, credits: 4),
+  FlowSubject(code: 'BPTMI05', name: 'Matemáticas V', period: 7, credits: 4),
+  FlowSubject(
+    code: 'BPTSP04',
+    name: 'Sistemas Operativos',
+    period: 7,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FPTSP26',
+    name: 'Bases de Datos II',
+    period: 7,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'BPTMI07',
+    name: 'Estadísticas para Ing. II',
+    period: 7,
+    credits: 4,
+  ),
+  FlowSubject(code: 'FPTSP17', name: 'Optimización I', period: 7, credits: 4),
 
   // ── PERIODO VIII ──
-  FlowSubject(code: 'FPTSP01', name: 'Ingeniería de Software', period: 8, credits: 4),
-  FlowSubject(code: 'FPTM20', name: 'Simulación', period: 8, credits: 4),
-  FlowSubject(code: 'FPTSP18-A', name: 'Optimización II', period: 8, credits: 4),
-  FlowSubject(code: 'BPTM11-M', name: 'Modelos Estocásticos', period: 8, credits: 4),
-  FlowSubject(code: 'BPTSP03-IV', name: 'Sistemas Operativos', period: 8, credits: 4),
-  FlowSubject(code: 'FGE1', name: 'FGE', period: 8, credits: 4, isElective: true),
+  FlowSubject(
+    code: 'FPTSP07',
+    name: 'Ingeniería de Software',
+    period: 8,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FPTPI09',
+    name: 'Gestión de Cadena de Suministros',
+    period: 8,
+    credits: 4,
+  ),
+  FlowSubject(code: 'FPTSP19', name: 'Optimización II', period: 8, credits: 4),
+  FlowSubject(code: 'BPTMM91', name: 'Cálculo Numérico', period: 8, credits: 4),
+  FlowSubject(
+    code: 'FGE3',
+    name: 'FGE',
+    period: 8,
+    credits: 4,
+    isElective: true,
+  ),
 
   // ── PERIODO IX ──
-  FlowSubject(code: 'FPTSP17', name: 'Gestión Cadena Suministro I', period: 9, credits: 4),
-  FlowSubject(code: 'FPTSP19', name: 'Modelación Sist. en Redes', period: 9, credits: 4),
-  FlowSubject(code: 'BPTM06-III', name: 'Modelos Determinísticos', period: 9, credits: 4),
-  FlowSubject(code: 'BPTSP07', name: 'Sistemas de Apoyo', period: 9, credits: 4),
-  FlowSubject(code: 'FPS-IX', name: 'FPS', period: 9, credits: 2),
-  FlowSubject(code: 'FGE2', name: 'FGE', period: 9, credits: 4, isElective: true),
+  FlowSubject(
+    code: 'FPTSP17',
+    name: 'Sistemas Distribuidos',
+    period: 9,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FPTSP19',
+    name: 'Modelación Sist. en Redes',
+    period: 9,
+    credits: 4,
+  ),
+  FlowSubject(code: 'FPTSP20', name: 'Simulación', period: 9, credits: 4),
+  FlowSubject(
+    code: 'FPTMI21',
+    name: 'Modelos Estocásticos',
+    period: 9,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FPTSP22',
+    name: 'Taller de Trabajo de Grado',
+    period: 9,
+    credits: 2,
+  ),
 
   // ── PERIODO X ──
-  FlowSubject(code: 'FPTSP28', name: 'Sistemas Distribuidos', period: 10, credits: 4),
-  FlowSubject(code: 'FPTSP21', name: 'Análisis de Datos', period: 10, credits: 4),
-  FlowSubject(code: 'FPTM21', name: 'Modelos Estocásticos II', period: 10, credits: 4),
-  FlowSubject(code: 'BPTM07', name: 'Computación Energética', period: 10, credits: 4),
-  FlowSubject(code: 'FGE3', name: 'FGE', period: 10, credits: 4, isElective: true),
+  FlowSubject(
+    code: 'FPTEN23',
+    name: 'Sistemas de Redes',
+    period: 10,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FPTSP27',
+    name: 'Análisis de Datos',
+    period: 10,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FPTSP23',
+    name: 'Sistemas de Apoyo',
+    period: 10,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FPS',
+    name: 'Seminario Profesional',
+    period: 10,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FGE4',
+    name: 'FGE',
+    period: 10,
+    credits: 4,
+    isElective: true,
+  ),
 
   // ── PERIODO XI ──
-  FlowSubject(code: 'FPTEG02', name: 'Sistemas de Redes', period: 11, credits: 4),
-  FlowSubject(code: 'FPTSP7-A', name: 'Análisis de Proyectos TIC', period: 11, credits: 4),
-  FlowSubject(code: 'FPTSP04', name: 'Gerencia de Proyectos TIC', period: 11, credits: 4),
-  FlowSubject(code: 'BPTM37', name: 'Ingeniería Económica', period: 11, credits: 4),
-  FlowSubject(code: 'FGE4', name: 'FGE', period: 11, credits: 4, isElective: true),
+  FlowSubject(
+    code: 'FPTSP18',
+    name: 'Seguridad de la Información',
+    period: 11,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FPTSP25',
+    name: 'Computación Emergente',
+    period: 11,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FPTSP11',
+    name: 'Gerencia de Proyectos TIC',
+    period: 11,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FPTEN27',
+    name: 'Robótica Industrial',
+    period: 11,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FGE5',
+    name: 'FGE',
+    period: 11,
+    credits: 4,
+    isElective: true,
+  ),
 
   // ── PERIODO XII ──
-  FlowSubject(code: 'FPTEG23', name: 'Seguridad de Información', period: 12, credits: 4),
-  FlowSubject(code: 'FPTEN3', name: 'Gerencia de la Seguridad', period: 12, credits: 4),
-  FlowSubject(code: 'FPTSP11', name: 'Ingeniería Económica II', period: 12, credits: 4),
-  FlowSubject(code: 'FGE5', name: 'FGE', period: 12, credits: 4, isElective: true),
-
-  // ── PERIODO XIII ──
-  FlowSubject(code: '150-BP', name: 'Proyecto de Ingeniería', period: 13, credits: 12),
-  FlowSubject(code: 'FPTCS16', name: 'Ingeniería Ambiental', period: 13, credits: 4),
-  FlowSubject(code: 'FPTSP15', name: 'Ingeniería Económica III', period: 13, credits: 4),
-  FlowSubject(code: 'TALLER-GRADO', name: 'Taller Trabajo de Grado', period: 13, credits: 4),
-  FlowSubject(code: 'FGE6', name: 'FGE', period: 13, credits: 4, isElective: true),
-  FlowSubject(code: 'FGE7', name: 'FGE', period: 13, credits: 4, isElective: true),
+  FlowSubject(
+    code: 'FPTSP14',
+    name: 'Proyecto de Ingeniería',
+    period: 12,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FPTSP15',
+    name: 'Ingeniería Económica',
+    period: 12,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FPTCS16',
+    name: 'Ingeniería Ambiental',
+    period: 12,
+    credits: 4,
+  ),
+  FlowSubject(
+    code: 'FGE6',
+    name: 'FGE',
+    period: 12,
+    credits: 4,
+    isElective: true,
+  ),
+  FlowSubject(
+    code: 'FGE7',
+    name: 'FGE',
+    period: 12,
+    credits: 4,
+    isElective: true,
+  ),
 ];
 
 // ─────────────────────────────────────────────
@@ -167,8 +386,7 @@ class _FlujogramaScreenState extends State<FlujogramaScreen> {
   }
 
   // ── Progress helpers ──
-  int get _mandatoryTotal =>
-      _subjects.where((s) => !s.isElective).length;
+  int get _mandatoryTotal => _subjects.where((s) => !s.isElective).length;
   int get _electiveTotal => totalElectives;
   int get _grandTotal => _mandatoryTotal + _electiveTotal;
 
@@ -212,7 +430,21 @@ class _FlujogramaScreenState extends State<FlujogramaScreen> {
   }
 
   String _romanNumeral(int period) {
-    const r = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII'];
+    const r = [
+      'I',
+      'II',
+      'III',
+      'IV',
+      'V',
+      'VI',
+      'VII',
+      'VIII',
+      'IX',
+      'X',
+      'XI',
+      'XII',
+      'XIII',
+    ];
     return period > 0 && period <= r.length ? r[period - 1] : '$period';
   }
 
@@ -234,7 +466,9 @@ class _FlujogramaScreenState extends State<FlujogramaScreen> {
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
-                borderRadius: BorderRadius.vertical(bottom: Radius.circular(32)),
+                borderRadius: BorderRadius.vertical(
+                  bottom: Radius.circular(32),
+                ),
               ),
               padding: const EdgeInsets.fromLTRB(24, 20, 24, 28),
               child: Column(
@@ -242,8 +476,11 @@ class _FlujogramaScreenState extends State<FlujogramaScreen> {
                 children: [
                   const Row(
                     children: [
-                      Icon(Icons.account_tree_rounded,
-                          color: Colors.white, size: 22),
+                      Icon(
+                        Icons.account_tree_rounded,
+                        color: Colors.white,
+                        size: 22,
+                      ),
                       SizedBox(width: 10),
                       Text(
                         'Flujograma – Ing. Sistemas',
@@ -274,8 +511,16 @@ class _FlujogramaScreenState extends State<FlujogramaScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            _statBox('Vistas', '$_totalChecked', Colors.greenAccent),
-                            _statBox('Restantes', '$remaining', Colors.redAccent),
+                            _statBox(
+                              'Vistas',
+                              '$_totalChecked',
+                              Colors.greenAccent,
+                            ),
+                            _statBox(
+                              'Restantes',
+                              '$remaining',
+                              Colors.redAccent,
+                            ),
                             _statBox('Total', '$_grandTotal', Colors.white),
                           ],
                         ),
@@ -289,9 +534,10 @@ class _FlujogramaScreenState extends State<FlujogramaScreen> {
                                   value: _progress,
                                   minHeight: 10,
                                   backgroundColor: Colors.white24,
-                                  valueColor: const AlwaysStoppedAnimation<Color>(
-                                    Colors.greenAccent,
-                                  ),
+                                  valueColor:
+                                      const AlwaysStoppedAnimation<Color>(
+                                        Colors.greenAccent,
+                                      ),
                                 ),
                               ),
                             ),
@@ -311,11 +557,13 @@ class _FlujogramaScreenState extends State<FlujogramaScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             _miniStat(
-                                '📚 Obligatorias',
-                                '$_mandatoryChecked / $_mandatoryTotal'),
+                              '📚 Obligatorias',
+                              '$_mandatoryChecked / $_mandatoryTotal',
+                            ),
                             _miniStat(
-                                '🎓 Electivas',
-                                '$_electiveChecked / $totalElectives'),
+                              '🎓 Electivas',
+                              '$_electiveChecked / $totalElectives',
+                            ),
                           ],
                         ),
                       ],
@@ -344,86 +592,87 @@ class _FlujogramaScreenState extends State<FlujogramaScreen> {
 
           // ─── Periods ───
           SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) {
-                final period = _periods[index];
-                final subs = _subjectsForPeriod(period);
-                final color = _periodColor(period);
-                final periodDone = subs.where((s) => _checked.contains(s.code)).length;
+            delegate: SliverChildBuilderDelegate((context, index) {
+              final period = _periods[index];
+              final subs = _subjectsForPeriod(period);
+              final color = _periodColor(period);
+              final periodDone = subs
+                  .where((s) => _checked.contains(s.code))
+                  .length;
 
-                return Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 12, 20, 0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      // Period header
-                      Row(
-                        children: [
-                          Container(
-                            width: 38,
-                            height: 38,
-                            decoration: BoxDecoration(
-                              color: color,
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            alignment: Alignment.center,
-                            child: Text(
-                              _romanNumeral(period),
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 11,
-                              ),
-                            ),
+              return Padding(
+                padding: const EdgeInsets.fromLTRB(20, 12, 20, 0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Period header
+                    Row(
+                      children: [
+                        Container(
+                          width: 38,
+                          height: 38,
+                          decoration: BoxDecoration(
+                            color: color,
+                            borderRadius: BorderRadius.circular(12),
                           ),
-                          const SizedBox(width: 10),
-                          Text(
-                            'Período ${_romanNumeral(period)}',
+                          alignment: Alignment.center,
+                          child: Text(
+                            _romanNumeral(period),
                             style: const TextStyle(
+                              color: Colors.white,
                               fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                              color: Color(0xFF2D2C3C),
+                              fontSize: 11,
                             ),
                           ),
-                          const Spacer(),
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 10, vertical: 4),
-                            decoration: BoxDecoration(
-                              color: color.withAlpha(20),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text(
-                              '$periodDone/${subs.length}',
-                              style: TextStyle(
-                                color: color,
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 10),
-                      // Subject cards
-                      Wrap(
-                        spacing: 10,
-                        runSpacing: 10,
-                        children: subs
-                            .map((s) => _buildSubjectChip(s, color))
-                            .toList(),
-                      ),
-                      if (index < _periods.length - 1)
-                        Padding(
-                          padding: const EdgeInsets.only(top: 16),
-                          child: Divider(color: Colors.grey[200]),
                         ),
-                    ],
-                  ),
-                );
-              },
-              childCount: _periods.length,
-            ),
+                        const SizedBox(width: 10),
+                        Text(
+                          'Período ${_romanNumeral(period)}',
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                            color: Color(0xFF2D2C3C),
+                          ),
+                        ),
+                        const Spacer(),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: color.withAlpha(20),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Text(
+                            '$periodDone/${subs.length}',
+                            style: TextStyle(
+                              color: color,
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    // Subject cards
+                    Wrap(
+                      spacing: 10,
+                      runSpacing: 10,
+                      children: subs
+                          .map((s) => _buildSubjectChip(s, color))
+                          .toList(),
+                    ),
+                    if (index < _periods.length - 1)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 16),
+                        child: Divider(color: Colors.grey[200]),
+                      ),
+                  ],
+                ),
+              );
+            }, childCount: _periods.length),
           ),
 
           const SliverToBoxAdapter(child: SizedBox(height: 32)),
@@ -469,14 +718,14 @@ class _FlujogramaScreenState extends State<FlujogramaScreen> {
                     color: Colors.green.withAlpha(30),
                     blurRadius: 8,
                     offset: const Offset(0, 3),
-                  )
+                  ),
                 ]
               : [
                   BoxShadow(
                     color: Colors.black.withAlpha(8),
                     blurRadius: 4,
                     offset: const Offset(0, 2),
-                  )
+                  ),
                 ],
         ),
         child: Row(
@@ -485,14 +734,20 @@ class _FlujogramaScreenState extends State<FlujogramaScreen> {
             if (done)
               const Padding(
                 padding: EdgeInsets.only(right: 6),
-                child: Icon(Icons.check_circle_rounded,
-                    color: Colors.green, size: 16),
+                child: Icon(
+                  Icons.check_circle_rounded,
+                  color: Colors.green,
+                  size: 16,
+                ),
               )
             else if (isElective)
               Padding(
                 padding: const EdgeInsets.only(right: 6),
-                child:
-                    Icon(Icons.stars_rounded, color: Colors.amber[700], size: 15),
+                child: Icon(
+                  Icons.stars_rounded,
+                  color: Colors.amber[700],
+                  size: 15,
+                ),
               ),
             Flexible(
               child: Column(
@@ -504,8 +759,7 @@ class _FlujogramaScreenState extends State<FlujogramaScreen> {
                       fontSize: 12,
                       fontWeight: FontWeight.w600,
                       color: textColor,
-                      decoration:
-                          done ? TextDecoration.lineThrough : null,
+                      decoration: done ? TextDecoration.lineThrough : null,
                       decorationColor: Colors.green,
                       decorationThickness: 2,
                     ),
@@ -532,10 +786,15 @@ class _FlujogramaScreenState extends State<FlujogramaScreen> {
         Text(
           value,
           style: TextStyle(
-              color: color, fontSize: 22, fontWeight: FontWeight.bold),
+            color: color,
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+          ),
         ),
-        Text(label,
-            style: const TextStyle(color: Colors.white60, fontSize: 11)),
+        Text(
+          label,
+          style: const TextStyle(color: Colors.white60, fontSize: 11),
+        ),
       ],
     );
   }
@@ -551,10 +810,10 @@ class _FlujogramaScreenState extends State<FlujogramaScreen> {
     return Row(
       children: [
         Container(
-            width: 12,
-            height: 12,
-            decoration:
-                BoxDecoration(color: color, shape: BoxShape.circle)),
+          width: 12,
+          height: 12,
+          decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+        ),
         const SizedBox(width: 5),
         Text(label, style: const TextStyle(fontSize: 12, color: Colors.grey)),
       ],
